@@ -1,0 +1,23 @@
+UPDATE 1 
+>admin-page
+-my-account nilagay lahat ng appointment-modal inside a modal-container
+*
+<div class = "modal-container" >
+       <div class = "Appointment-modal">
+       </div>
+</div>
+*
+-fixed modal-container css for both my-account and admin-page
+-fixed calendar css
+-History-modal added 
+-Changed from appointment-modal class to history-modal
+*
+<div class="modal-container">
+      <div class="history-modal">
+      </div>
+</div>
+*
+-fixed button styles :hover and cursor:pointer properties
+-added completed modal
+-added send reminders modal
+-added search textbox in appointment modal

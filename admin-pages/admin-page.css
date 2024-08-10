@@ -1,0 +1,1127 @@
+html::-webkit-scrollbar {
+    width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: #53a9f07c;
+}
+html::-webkit-scrollbar-track {
+    background-color: white;
+}
+body {
+    --nav-height: 90px;
+    background-color: #ECF0F6;
+    padding-top: var(--nav-height);
+    padding: 0;
+    margin: 0;
+}
+/* Legaspi Dental Clinic Logo */
+.legaspi_logo {
+    padding: 1rem;
+    display: flex;
+}
+/* Navigation Bar */
+.navigation-bar {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: var(--nav-height);
+    justify-content:space-between;
+    z-index: 7;
+    transition: transform 0.4s;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.nav--hidden {
+    transform: translateY(calc(-1 * var(--nav-height)));
+    
+    
+}
+/* Navigation Links */
+.navigation-links {
+    padding: 1.5rem;
+    color: #1064AD;
+    font-size: 30px;
+    font-family: BAYON;
+    text-decoration: none;
+}
+.navigation-links2 {
+    background-color: #1064AD;
+    color: white;
+    font-size: 30px;
+    font-family: BAYON;
+    text-decoration: none;
+    border-radius: 100px; 
+    height: 20px; 
+    color: white; 
+    padding-right: 30px; 
+    padding-left: 30px;
+}
+.navigation-links2:hover {
+    background-color: #1EC0F7;
+    transition: 0.3s;
+}
+.navigation-links:hover {
+    padding: 1.5rem;
+    color: #1EC0F7;
+    font-size: 30px;
+    font-family: BAYON;
+    text-decoration: none;
+    transition: 0.3s;
+}
+/* Current Page */
+.current-page {
+    padding: 1.5rem;
+    color: #1EC0F7;
+    font-size: 30px;
+    font-family: BAYON;
+    text-decoration: none;
+}
+/* Hamburger Container */
+.hamburger-container {
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    display: flex;
+    justify-content:flex-end;
+}
+.hamburger-container-hidden {
+    opacity: 0.1;
+}
+/* Hamburger Menu */
+.hamburger {
+    cursor: pointer; 
+    margin-top: 0.9rem;
+    margin-right: 1.5rem;
+    position: fixed;
+    display: block;
+    width: 50px;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 10;
+    transition: transform 0.4s;
+    height: var(--nav-height);
+}
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 7px;
+    background-color: #1064AD;
+    margin: 6px 0px;
+    transition:0.4s;
+    z-index: 3;
+}
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-10px, 6px);
+}
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-11px, -8px);
+}
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+/* Mobile Navigation */
+.mobile-nav {
+    position: fixed;
+    left: 100%;
+    width:100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 6;
+    background-color: white;
+    transition: 0.4s;
+    padding-top: 100px;
+    margin-top: -10px;
+}
+.mobile-nav.is-active {
+    left:0;
+}
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 10px;
+    margin:0 auto;
+    font-size: 40px;
+    font-family: BAYON;
+    text-align: center;
+    text-decoration: none;
+    color: #1064AD;
+    justify-content: center;
+}
+.mobile-nav a:hover{
+    color: #1EC0F7;
+    transition: 0.4s;
+}
+.mobile-nav2 {
+    margin-left:100pc;
+    font-size: 40px;
+    font-family: BAYON;
+    text-align: center;
+    text-decoration: none;
+    background-color: #1064AD;
+    color: white;
+    border-radius: 100px;
+}
+.mobile-nav2:hover{
+    background-color: #1EC0F7;
+    transition: 0.4s;
+}
+@font-face {
+    font-family: BAYON;
+    src: url("/fonts/Bayon-Regular.ttf");
+}
+/* My Account Navigation */
+.my-account-nav {
+    position: fixed;
+    background-color: #ECF0F6;
+    padding-top: 100px;
+    padding-left: 80px;
+    padding-right: 30px;
+    min-width: 150px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: BAYON;
+    font-weight: light;
+    color: #1064AD;
+    z-index: 5;
+}
+.my-account-nav p {
+    font-size: 40px;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.my-account-nav button:hover {
+    color: #1064AD;
+}
+.btn-account {
+    cursor: pointer;
+    font-size: 25px;
+    max-width: 200px;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #53a9f03a;
+    text-align: left;
+    color: #1064AD;
+}
+.btn-dashboard {
+    cursor: pointer;
+    font-size: 25px;
+    max-width: 200px;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #53a9f03a;
+    text-align: left;
+    color: #1064AD;
+}
+.btn-appointment {
+    cursor: pointer;
+    font-size: 25px;
+    max-width: 200px;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #ECF0F6;
+    text-align: left;
+    color: #5e5e5e;
+}
+.btn-sms-reminder {
+    cursor: pointer;
+    font-size: 25px;
+    max-width: 200px;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #ECF0F6;
+    text-align: left;
+    color: #5e5e5e;
+}
+.btn-previews {
+    cursor: pointer;
+    font-size: 25px;
+    max-width: 200px;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #ECF0F6;
+    text-align: left;
+    color: #5e5e5e;
+}
+.btn-clients {
+    cursor: pointer;
+    font-size: 25px;
+    max-width: 200px;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #ECF0F6;
+    text-align: left;
+    color: #5e5e5e;
+}
+.btn-my-details {
+    cursor: pointer;
+    font-size: 25px;
+    max-width: 200px;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #ECF0F6;
+    text-align: left;
+    color: #5e5e5e;
+}
+.btn-history {
+    cursor: pointer;
+    font-size: 25px;
+    max-width: 200px;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #ECF0F6;
+    text-align: left;
+    color: #5e5e5e;
+}
+.btn-remarks {
+    cursor: pointer;
+    font-size: 25px;
+    max-width: 200px;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #ECF0F6;
+    text-align: left;
+    color: #5e5e5e;
+}
+.my-account-small-nav-slash {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #333333;
+}
+.my-account-small-nav {
+    font-family: Arial;
+    display: flex;
+    flex-direction: row;
+    color: #333333;
+}
+.my-account-small-nav p {
+    padding-top: 10px;
+    font-weight: light;
+    font-size: 17px;
+}
+.my-account-small-nav a {
+    text-decoration: none;
+    color: #5e5e5e;
+}
+.my-account-small-nav a:hover {
+    color: #1064AD;
+}
+.my-account-small-nav-current {
+    color: #1064AD;
+}
+/* My Account Modal */ 
+.my-account-modal-container {
+    display: flex;
+}
+.my-account-modal {
+    background-color: white;
+    margin-top: 150px;
+    margin-left: 300px;
+    margin-right: 100px;
+    display: flex;
+    width: 100%;
+    height: 700px;
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.315);
+    padding: 50px;
+    overflow: hidden;
+    overflow-y: scroll;
+    z-index: 5;
+}
+.my-account-modal::-webkit-scrollbar {
+    width: 10px;
+}
+.my-account-modal::-webkit-scrollbar-thumb {
+    background-color: #53a9f07c;
+}
+
+/* Tabs */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.appointment-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.sms-reminder-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.previews-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.clients-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.my-details-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.remarks-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.calendar-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.calendar-nav button {
+    background-color: #1064AD;
+    color: white;
+    font-family: BAYON;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+    border: 0;
+    border-radius: 5px;
+}
+.calendar-nav button:hover {
+    cursor: pointer;
+    background-color: #105796;
+}
+
+
+
+
+
+.clients-modal-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    gap: 1;
+}
+
+
+.title {
+    font-family: BAYON;
+    font-size: 50px;
+    color: #1064AD;
+    padding: 0;
+    margin: 0;
+}
+.subtext {
+    font-family: BAYON;
+    font-size: 20px;
+    color: #5e5e5e;
+}
+.divider {
+    height: 1px;
+    background-color: #5e5e5e;
+    display: flex;
+    
+}
+.appointment-divider {
+    height: 1px;
+    background-color: #5e5e5e;
+    display: flex;
+}
+.name-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.label {
+    font-family: BAYON;
+    font-size: 17px;
+    color: #5e5e5e;
+    padding-top: 10px;
+}
+.birth-and-age-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+.email-container {
+    display: flex;
+    flex-direction: row;
+}
+.phone-number-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+.edit-btn-container {
+    margin-bottom: 50px;
+}
+.edit-btn {
+    cursor:pointer;
+    font-family: BAYON;
+    font-size: 20px;
+    color: white;
+    background-color: #1064AD;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 0px;
+    border-radius: 5px;
+    z-index: 8;
+}
+
+.edit-btn:hover {
+    background-color: #105796;
+}
+.logout-btn {
+    cursor: pointer;
+    font-family: BAYON;
+    font-size: 20px;
+    color: white;
+    background-color: #1064AD;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 0px;
+    border-radius: 5px;
+}
+.logout-btn:hover {
+    background-color: #105796;
+}
+.names {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-flex-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.info-flex-container-col {
+    display: flex;
+    flex-direction: column;
+}
+.sms-flex-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.info-flex-container-space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+}
+.info-flex-container-border {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.info-flex-container-border-remark {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.info-flex-container-space-between-remark {
+    display: flex;
+    justify-content: space-between;
+}
+.client-modal {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.remarks-modal {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.my-details-content input {
+    margin-bottom: 20px;
+}
+.info-container {
+    height: 100%;
+    width: 220px;
+    padding: 0;
+    margin: 0;
+    
+}
+.info-container-underline {
+    font-family: Arial;
+    border-bottom: 1px solid black;
+    height: 40px;
+    margin-left: -20px;
+}
+.info-container-percent {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+.info {
+    font-family: Arial;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    background-color: #ECF0F6;
+}
+
+/* Appointments Content */
+.appointment-content {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.sms-modal-container {
+    overflow: hidden;
+    overflow-y: scroll;
+    
+    height: 500px;
+}
+.modal-container {
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+}
+.calendar-modal-container {
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+}
+.calendar-modal-container::-webkit-scrollbar {
+    width: 10px;
+}
+.calendar-modal-container::-webkit-scrollbar-thumb {
+    background-color: #1064AD;
+    border-radius: 100px;
+}
+.calendar-modal-container::-webkit-scrollbar-track {
+}
+.modal-container::-webkit-scrollbar {
+    width: 10px;
+}
+.modal-container::-webkit-scrollbar-thumb {
+    background-color: #1064AD;
+    border-radius: 100px;
+}
+.modal-container::-webkit-scrollbar-track {
+}
+
+.appointment-modal {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.history-modal {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.appointment-modal button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.appointment-services {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.label {
+    font-family: BAYON;
+    font-size: 17px;
+    color: #5e5e5e;
+    padding: 0;
+}
+.date-and-time-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.appointment-btn-container {
+    
+}
+.appointment-btn {
+    cursor: pointer;
+    font-family: BAYON;
+    font-size: 20px;
+    color: white;
+    background-color: #1064AD;
+    padding: 10px;
+    margin: 0;
+    border: 0;
+    border-radius: 5px;
+}
+.appointment-btn:hover {
+    background-color: #105796;
+}
+
+/* History Content */
+.history-content {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.search-textbox {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #5e5e5e;
+    padding-left: 10px;
+}
+.modal {
+    display: none;
+    height: 100px;
+    width: 100px;
+    
+    z-index: 8;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.edit-password-content-container {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+.edit-password-btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+.edit-password-content {
+    background-color: white;
+    padding: 30px;
+    width: 300px;
+    
+    border-radius: 5px;
+    z-index: 10;
+}
+.password-textbox input {
+    font-family: Arial;
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+    
+}
+.logout-content-container {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+.completed-content-container {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+/* here ako nag stop */
+.send-reminder-content-container {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+.logout-content {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+}
+.completed-content {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+}
+.reschedule-container {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+.reschedule {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+}
+.cancel-appointment-container {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+.cancel-appointment {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+}
+.book-appointment-container {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+.book-appointment {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+}
+.dark-modal-overlay {
+    display: none;
+    background-color: #1EC0F7;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    opacity: 35%;
+    margin: 0;
+    padding: 0;
+    transition: ease-in 5000ms ease-out 5000ms;
+    z-index: 9;
+}
+
+
+/* Media Screen */
+@media (min-width: 983px) {
+    .hamburger  {
+        display: none;
+        opacity: 0;
+    }
+    .mobile-nav {
+        display: none;
+        opacity: 0;
+    }
+    .feature-image {
+        min-height: 100vh;
+    }   
+}
+@media (max-width: 982px) {
+    .my-account-nav {
+        display: none;
+    }
+    .my-account-modal {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+@media (max-width: 690px) {
+    .name-container {
+        flex-direction: column;
+        gap: 0;
+    }
+    .birth-and-age-container {
+        flex-direction: column;
+        gap: 0;
+    }
+    .info-container-percent {
+        height: 100%;
+        width: 200px;
+        padding: 0;
+    }
+    .date-and-time-container {
+        flex-direction: column;
+        gap: 0;
+    }
+    .appointment-services {
+        flex-direction: column;
+        gap: 0;
+    }
+    .appointment-btn-container {
+        flex-direction: column;
+    }
+    .sex-and-age-container {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+@media (max-width:500px) {
+    .my-account-modal {
+        margin-top: 110px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.search-icon-container {
+    padding: 0;
+    margin: 0;
+}
+.search-icon {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #1064AD;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.search-icon-flex {
+    display: flex;
+    
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+}
+
+.sms-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-family: Arial;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+
+/* Dropdown menu */
+.dropdown {
+    min-width: 300px;
+    width: 100%;
+    position: relative;
+    font-family: Arial;
+    color: #5e5e5e;
+}
+.dropdown * {
+    box-sizing: border-box;
+}
+.select {
+    cursor: pointer;
+    border: 1px solid #5e5e5e;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6px;
+    padding-left: 10px; 
+    transition: background 0.3s;
+}
+.select:hover {
+    background-color: rgb(223, 223, 223);
+}
+.select-clicked {
+    border: 2px #1064AD solid;
+}
+.caret {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid #1064AD;
+    transition: 0.3s;
+}
+.caret-rotate {
+    transform: rotate(180deg);
+}
+
+.menu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: white;
+    border: 1px #5e5e5e solid;
+    border-radius: 5px;
+    color: #5e5e5e;
+    position: absolute;
+    top: 30px; /* Adjust based on the height of .select */
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none; /* Disable pointer events when not visible */
+    transform: translateY(-10px); /* Start hidden above */
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 5;
+}
+.menu-open {
+    opacity: 1;
+    pointer-events: auto; /* Enable pointer events when visible */
+    transform: translateY(0);
+}
+.menu li {
+    padding: 0.5em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-family: Arial;
+}
+.menu li:hover {
+    background: rgb(223, 223, 223);
+    border-radius: 5px;
+}
+.active {
+    background: #53a9f03a;
+    border-radius: 5px;
+}
+.selected {
+    margin-top: 5px;
+}
+.list-of-client-modal {
+    border: 1px solid #5e5e5e;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+}
+.list-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.list-modal {
+    font-family: Arial;
+    display: flex;
+    border: 1px solid #5e5e5e;
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100px;
+    padding: 0px;
+}
+.list-modal::-webkit-scrollbar {
+    width: 10px;
+}
+.list-modal::-webkit-scrollbar-thumb {
+    background-color: #1064AD;
+    border-radius: 100px;
+}
+.send-sms-btn {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+.send-sms-btn button {
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: #1064AD;
+    color: white;
+    font-family: BAYON;
+    font-size: 30px;
+}
+.send-sms-btn button:hover {
+    background-color: #105796;
+}
+
+.my-account-nav button {
+    font-family: BAYON;
+}

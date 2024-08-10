@@ -1,0 +1,228 @@
+/* Header---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Legaspi Dental Clinic Logo */
+.legaspi_logo {
+    margin: 1rem;
+}
+/* Navigation Bar */
+.navigation-bar {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content:space-between;
+    z-index: 3;
+}
+/* Navigation Links */
+.navigation-links {
+    padding: 1.5rem;
+    color: #1064AD;
+    font-size: 30px;
+    font-family: BAYON;
+    text-decoration: none;
+}
+.navigation-links:hover {
+    padding: 1.5rem;
+    color: #1EC0F7;
+    font-size: 30px;
+    font-family: BAYON;
+    text-decoration: none;
+    transition: 0.3s;
+}
+/* Current Page */
+.current-page {
+    padding: 1.5rem;
+    color: #1EC0F7;
+    font-size: 30px;
+    font-family: BAYON;
+    text-decoration: none;
+}
+/* Hamburger Container */
+.hamburger-container {
+    width: 100%;
+    background-color: white;
+    z-index: 3;
+    display: flex;
+    justify-content:flex-end;
+}
+/* Hamburger Menu */
+.hamburger {
+    cursor: pointer; 
+    margin-top: 0.9rem;
+    margin-right: 1.5rem;
+    position: fixed;
+    display: block;
+    width: 50px;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 4;
+}
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 7px;
+    background-color: #1064AD;
+    margin: 6px 0px;
+    transition:0.4s;
+    z-index: 3;
+}
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-10px, 6px);
+}
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-11px, -8px);
+}
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+/* Mobile Navigation */
+.mobile-nav {
+    position: fixed;
+    left: 100%;
+    width:100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 2;
+    background-color: white; 
+    transition: 0.4s;
+    padding-top: 100px;
+}
+.mobile-nav.is-active {
+    left:0;
+}
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px 20px;;
+    margin:0 auto;
+    font-size: 40px;
+    font-family: BAYON;
+    text-align: center;
+    text-decoration: none;
+    color: #1064AD;
+    justify-content: center;
+}
+.mobile-nav a:hover{
+    color: #1EC0F7;
+    transition: 0.4s;
+}
+@media (min-width: 1343px) {
+    .hamburger  {
+        display: none;
+        opacity: 0;
+    }
+    .mobile-nav {
+        display: none;
+        opacity: 0;
+    }
+}
+@media (max-width: 1343px) {
+    .navigation-links {
+        display: none;
+        opacity: 0;
+    }
+}
+@font-face {
+    font-family: BAYON;
+    src: url("/fonts/Bayon-Regular.ttf");
+}
+/* Footer----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/ 
+.footer {
+    
+    display: flex;
+    flex-wrap: wrap;
+    background-color:#1EC0F7;
+    color: white;
+    padding: 50px;
+    gap: 8rem;
+}
+.footer h1 {
+    font-size: 24px; 
+    font-family: BAYON; 
+    margin-bottom: 5px;
+}
+.footer p {
+    font-size: 13px;
+    font-family: Arial;
+}
+.footer a {
+    font-size: 13px;
+    font-family: Arial;
+    color: white;
+}
+.footer-divider {
+    width:1px; 
+    background-color: white;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+body {
+    background-color: #e1e4eb;
+
+}
+.container {
+    font-family: BAYON;
+    width: 100%;
+
+}
+.modal {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1EC0F7;
+    
+    
+}
+.thank-you {
+    color: white;
+    font-size: 150px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+.sentence {
+    color: white;
+    font-size: 25px;
+    width: 1000px;
+    text-align: center;
+}
+.modal img {
+    
+    height: 250px;
+    width: 250px;
+    
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: -50px;
+    
+    
+}
+.flex-container p {
+    color: rgb(163, 163, 163);
+    font-size: 30px;
+    margin-right: 20px;
+}
+.flex-container button{
+    cursor: pointer;
+    font-size: 30px;
+    border: none;
+    background-color: #1EC0F7;
+    color: white;
+    border-radius: 10px;
+    height: 90px;
+}
+.flex-container button:hover {
+    transform: scale(1.02);
+    transition: 200ms;
+}

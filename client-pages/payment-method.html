@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Legaspi Dental Clinic</title>
+    <link rel="stylesheet" href="/client-pages/payment-method.css">
+    <link rel="icon" type="image/x-icon" href="/images/teeth.png">
+    
+</head>
+
+<style>
+    /* Style for the file input button */
+    .custom-file-upload {
+        border: 1px solid #ccc;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+        background-color: #f0f0f0;
+        color: #333;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .custom-file-upload:hover {
+        background-color: #e0e0e0;
+    }
+
+    /* Style for the image preview */
+    #image-preview {
+        max-width: 100%;
+        max-height: 300px;
+        margin-top: 10px;
+    }
+</style>
+
+
+
+
+<body>
+    <!--Dark Overlay-->
+    <div class="dark-modal-overlay" id="dark-modal-overlay"></div>
+    <header>
+        <!--Navigation Bar-->
+        <div class="col-lg-12 col-sm-12 col-md-12 navigation-bar">
+            <img src="/images/legaspi_dental_clinic_logo.jpg" class="legaspi_logo fade-in" alt="legaspi">
+            <nav class="navigation-links">
+            </nav>
+        </div>
+        <!--Hamburger Menu-->
+        <div class="hamburger-container">
+            <div class="hamburger">
+            <div class="bar"></div>
+        </div>
+    </header>
+    <!--Mobile Navigation-->
+    <div>
+        <nav class="mobile-nav">
+            <a href="/client-pages/index-w-acc.html" class="nav-link">HOME</a>
+            <a href="/client-pages/my-account.html" class="mobile-nav2" style="color: white; padding: 0;">MY ACCOUNT</a>
+        </nav>
+    </div>
+    <!--Side Navigation-->
+    <div>
+        <div class="my-account-nav">
+            <div class="my-account-small-nav">
+                <a href="/client-pages/index-w-acc.html"><p>Home</p></a>
+                <p class="my-account-small-nav-slash"> / </p>
+                <a href="/client-pages/book-appointment.html"><p>Book Appointment</p></a>
+                <p class="my-account-small-nav-slash"> / </p>
+                <p class="my-account-small-nav-current">Downpayment</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <!--Account Modal-->
+    <div class="my-account-modal-container">
+
+        <div class="my-account-modal">
+            
+            <div class="info-flex-container-col">
+                <div class="text-align">
+                    <p class="title">Downpayment</p>
+                    <div class="divider"></div>
+                    <p class="subtext">Choose a service</p>
+                    <p style="font-size: 13px;
+                    font-family: Arial;">Note: The services require a 15% downpayment based on the original price.</p>
+                    <div class="service-wrap">
+                        <div class="service-container">
+                            <div class="service-box" onclick="openoralprophylaxis()" id="oralprophylaxisbox">
+                                <p class="service-text">Oral Prophylaxis</p>
+                                <p style="font-size:12px; 
+                                          margin-top: -10px; 
+                                          color: #1064AD;">Downpayment: 105Php
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-container">
+                            <div class="service-box" onclick="opentoothrestoration()" id="toothrestorationbox">
+                                <p>Tooth Restoration</p>
+                                <p style="font-size:12px; 
+                                          margin-top: -10px; 
+                                          color: #1064AD;">Downpayment: 135Php
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-container">
+                            <div class="service-box" onclick="opentoothextraction()" id="toothextractionbox">
+                                <p>Tooth Extraction</p>
+                                <p style="font-size:12px; 
+                                          margin-top: -10px; 
+                                          color: #1064AD;">Downpayment: 120Php
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-container">
+                            <div class="service-box" onclick="openremovabledenture()" id="removabledenturebox" >
+                                <p>Removable Denture</p>
+                                <p style="font-size:12px; 
+                                          margin-top: -10px; 
+                                          color: #1064AD;">Downpayment: 1,200Php
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-container">
+                            <div class="service-box" onclick="openorthodonticbraces()" id="orthodonticbracesbox">
+                                <p>Orthodontic Braces</p>
+                                <p style="font-size:12px; 
+                                          margin-top: -10px; 
+                                          color: #1064AD;">Downpayment: 900Php
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-container">
+                            <div class="service-box" onclick="openrootcanal()" id="rootcanalbox">
+                                <p>Root Canal Treatment</p>
+                                <p style="font-size:12px; 
+                                          margin-top: -10px; 
+                                          color: #1064AD;">Downpayment: 1,200Php
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-container">
+                            <div class="service-box" onclick="openflexibledenture()" id="flexibledenturebox">
+                                <p>Flexible Denture</p>
+                                <p style="font-size:12px; 
+                                          margin-top: -10px; 
+                                          color: #1064AD;">Downpayment: 2,250Php
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-container">
+                            <div class="service-box"  onclick="opentoothwhitening()" id="toothwhiteningbox">
+                                <p>Tooth Whitening</p>
+                                <p style="font-size:12px; 
+                                          margin-top: -10px; 
+                                          color: #1064AD;">Downpayment: 750Php
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-container">
+                            <div class="service-box" onclick="openjacketcrown()" id="jacketcrownbox">
+                                <p>Jacket Crown</p>
+                                <p style="font-size:12px; 
+                                          margin-top: -10px; 
+                                          color: #1064AD;">Downpayment: 900Php
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-container">
+                            <div class="service-box" onclick="opentoothveneer()" id="toothveneerbox">
+                                <p>Tooth Veneer</p>
+                                <p style="font-size:12px; 
+                                          margin-top: -10px; 
+                                          color: #1064AD;">Downpayment: 450Php
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="subtext">Payment Method</p>
+                    <div class="service-wrap">
+                        <div class="bank-box">
+                            <button id="gcash-btn">
+                                <img src="/images/paymongo.png" alt="gcash" height="60" width="100%">   
+                            </button>
+                            
+                        </div>
+                        
+                    </div>
+                    <p style="font-size: 13px;
+                    font-family: Arial;">Note:Need to check your Google for the receipt</p>
+           <label for="receipt-image" class="custom-file-upload" style="font-family: Arial, Helvetica, sans-serif;">Upload your receipt Image</label>
+           <input type="file" id="receipt-image" accept="image/*" style="display: none;" required>
+           <div id="image-container">
+           </div>
+              
+                    <p class="subtext">Payment Details</p>
+                    <div class="details-modal" id="detailsModal" style="display: none;">
+                        <p id="bookFirstName">HQEWIOEOQWE</p>
+                        <p id="bookLastName">PLACEHOLDER</p>
+                        <p id="bookAge">00</p>
+                        <p id="sex">Male</p>
+                        <p id="time">00:00</p>
+                        <p id="remarks">Remarks</p>
+                        <p id="date">00/00/00</p>
+
+                    </div>
+                    <p style="font-size: 13px; font-family: Arial;">Note: Your down payment will be deducted from the total amount due at the clinic. However, please note that it is non-refundable if you cancel the appointment.</p>
+                    <div class="details-modal">
+                        <p style="font-size: 15px; font-family: Arial;">Selected Services:</p>
+                        <ul id="selected-services" style="font-size: 17px; font-family: Arial; list-style: none; padding-left: 0;">
+                        </ul>
+
+                        <p style="font-size: 17px; font-family: Arial;" id="service-price">Total Payment: 0 Php</p>
+                    </div>
+                    <button id="book-appointment-btn" class="book-appointment-btn">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="service-modal-container">
+            <div class="oralprophylaxismodal" id="oralprophylaxismodal">
+            <div id="oral-prophylaxis">
+                    <img src="/images/oral-prophylaxis.jpg" class="img-border"width="100%" alt="content1">
+                <p class="subtext">Oral Prophylaxis</p>
+                <p class="price" 
+                style="font-size:12px; 
+                        margin-top: -15px; 
+                        color: #1064AD;">Price: 700Php
+                </p>
+                <p>
+                    Oral prophylaxis, or dental cleaning, maintains oral health by removing plaque, tartar, and stains. A dentist or hygienist examines your mouth, scales the teeth to remove buildup, and polishes them to prevent plaque accumulation. An optional fluoride treatment strengthens enamel. Regular cleanings, recommended twice a year, help keep teeth and gums healthy.
+                </p>
+                <div class="info-flex-container-space-between">
+                    <button class="service-select-btn" id="selectoralprophylaxis" onclick="selectoralprophylaxis()" data-price="105" data-name="Oral Prophylaxis">Select</button>
+                    <button class="service-unselect-btn" id="unselectoralprophylaxis"onclick="unselectoralprophylaxis()">Unselect</button>
+                    <button class="service-select-btn" id="close" onclick="closeservicemodal()">Close</button>
+                </div>       
+            </div>
+            </div>
+            <div class="toothrestorationmodal" id="toothrestorationmodal">
+                <div id="tooth-restoration">
+                    <img src="/images/Tooth restoration.jpeg" class="img-border"width="100%" alt="content2">
+                <p class="subtext">Tooth Restoration</p>
+                <p class="price" 
+                style="font-size:12px; 
+                        margin-top: -15px; 
+                        color: #1064AD;">Price: 900Php
+                </p>
+                <p>
+                    Tooth restoration refers to various dental procedures aimed at repairing or replacing damaged or missing teeth to restore their function and appearance. These procedures can include fillings, crowns, bridges, implants, and dentures. The goal of tooth restoration is to ensure the health and structural integrity of the teeth, improve aesthetics, and enhance overall oral health.            </p>
+                <div class="info-flex-container-space-between">
+                    <button class="service-select-btn" id="selecttoothrestoration" onclick="selecttoothrestoration()" data-price="120" data-name="Tooth Restoration">Select</button>
+                    <button class="service-unselect-btn" id="unselecttoothrestoration"onclick="unselecttoothrestoration()">Unselect</button>
+                    <button class="service-select-btn" id="close" onclick="closeservicemodal()">Close</button>
+                </div>  
+            </div>
+            </div>
+            <div class="toothextractionmodal" id="toothextractionmodal">
+                <div id="tooth-extraction">
+                    <img src="/images/Tooth Extraction.jpeg" class="img-border"width="100%" alt="content2">
+                    <p class="subtext">Tooth Extraction</p>
+                    <p class="price" style="font-size:12px; margin-top: -15px; color: #1064AD;">Price: 800Php
+                    </p>
+                    <p>Tooth extraction, performed by a dentist or oral surgeon, involves removing a tooth from its socket due to severe decay, infection, crowding, or trauma. Simple extractions remove visible teeth with local anesthesia, while surgical extractions, used for broken or impacted teeth, require incisions and sometimes bone removal. Proper post-extraction care, including pain management and keeping the area clean, is essential for healing and preventing infection.</p>
+                    <div class="info-flex-container-space-between">
+                    <button class="service-select-btn" id="selecttoothextraction" onclick="selecttoothextraction()" data-price="1200" data-name="Tooth Extraction">Select</button>
+                    <button class="service-unselect-btn" id="unselecttoothextraction"onclick="unselecttoothextraction()">Unselect</button>
+                    <button class="service-select-btn" id="close" onclick="closeservicemodal()">Close</button>
+                </div>  
+            </div>
+            </div>
+            <div class="removabledenturemodal" id="removabledenturemodal">
+                <div id="removable-denture">
+                    <img src="/images/removable-denture.png" class="img-border"width="100%" alt="content2">
+                    <p class="subtext">Removable Denture</p>
+                    <p class="price" style="font-size:12px; margin-top: -15px; color: #1064AD;">Price: 8,00Php
+                    </p>
+                    <p>A removable denture is a dental appliance designed to replace missing teeth, which can be taken out and put back by the patient. There are two main types: partial dentures for some missing teeth and complete dentures for all missing teeth. They restore teeth function and appearance, aiding in chewing, speaking, and preventing facial structure changes due to tooth loss.</p>
+                    <div class="info-flex-container-space-between">
+                    <button class="service-select-btn" id="selectremovabledenture" onclick="selectremovabledenture()" data-price="1200" data-name="Removable Denture">Select</button>
+                    <button class="service-unselect-btn" id="unselectremovabledenture"onclick="unselectremovabledenture()">Unselect</button>
+                    <button class="service-select-btn" id="close" onclick="closeservicemodal()">Close</button>
+                </div>  
+            </div>
+            </div>
+            <div class="orthodonticbracesmodal" id="orthodonticbracesmodal">
+                <div id="orthodontic-braces">
+                    <img src="/images/removable-denture.png" class="img-border"width="100%" alt="content2">
+                    <p class="subtext">Orthodontic Braces</p>
+                    <p class="price" style="font-size:12px; margin-top: -15px; color: #1064AD;">Price: 6,000Php
+                    </p>
+                    <p>Orthodontic braces correct misaligned teeth and jaws, improving dental health and the appearance of a smile. They use brackets, an archwire, and elastic bands to gradually move teeth. Types include metal braces, ceramic braces, lingual braces, and clear aligners like Invisalign. Treatment can take several months to years, aiming to create a healthier bite and better smile.</p>
+                    <div class="info-flex-container-space-between">
+                    <button class="service-select-btn" id="selectorthodonticbraces" onclick="selectorthodonticbraces()" data-price="120" data-name="Orthodontic Braces">Select</button>
+                    <button class="service-unselect-btn" id="unselectorthodonticbraces"onclick="unselectorthodonticbraces()">Unselect</button>
+                    <button class="service-select-btn" id="close" onclick="closeservicemodal()">Close</button>
+                </div>  
+            </div>
+            </div>
+            <div class="rootcanalmodal" id="rootcanalmodal">
+            <div id="root-canal">
+                <img src="/images/ROOT-CANAL-TREATMENT.jpg" class="img-border"width="100%" alt="content2">
+                <p class="subtext">Tooth Extraction</p>
+                <p class="price" style="font-size:12px; margin-top: -15px; color: #1064AD;">Price: 8,000Php
+                </p>
+                <p>A root canal is a dental procedure to save a decayed or infected tooth by removing the damaged pulp, cleaning, disinfecting, and sealing the area. It starts with numbing, then opening the tooth to remove the infected pulp and filling the cleaned space. Finally, the tooth is sealed to restore function.</p>
+                <div class="info-flex-container-space-between">
+                <button class="service-select-btn" id="selectrootcanal" onclick="selectrootcanal()"  data-price="1200" data-name="Root Canal">Select</button>
+                <button class="service-unselect-btn" id="unselectrootcanal"onclick="unselectrootcanal()">Unselect</button>
+                <button class="service-select-btn" id="close" onclick="closeservicemodal()">Close</button>
+                </div>  
+            </div>
+            </div>
+            <div class="flexibledenturemodal" id="flexibledenturemodal">
+                <div id="flexible-denture">
+                    <img src="/images/flexible-denture.jpg" class="img-border"width="100%" alt="content2">
+                    <p class="subtext">Flexible Denture</p>
+                    <p class="price" style="font-size:12px; margin-top: -15px; color: #1064AD;">Price: 15,000Php
+                    </p>
+                    <p>Flexible dentures, made from a flexible thermoplastic material like nylon or polyester, replace missing teeth comfortably and naturally. They are durable, lightweight, and blend well with the mouth's shape, offering good retention without the need for adhesives or metal clasps. They're ideal for replacing a few missing teeth where aesthetics and comfort matter, but their suitability varies by case and should be discussed with a dentist.</p>
+                    <div class="info-flex-container-space-between">
+                    <button class="service-select-btn" id="selectflexibledenture" onclick="selectflexibledenture()"  data-price="2250" data-name="Flexible Denture">Select</button>
+                    <button class="service-unselect-btn" id="unselectflexibledenture"onclick="unselectflexibledenture()">Unselect</button>
+                    <button class="service-select-btn" id="close" onclick="closeservicemodal()">Close</button>
+                    </div>  
+                </div>
+            </div>
+            <div class="toothwhiteningmodal" id="toothwhiteningmodal">
+                <div id="tooth-whitening">
+                    <img src="/images/tooth whitening.jpg" class="img-border"width="100%" alt="content2">
+                    <p class="subtext">Tooth Whitening</p>
+                    <p class="price" style="font-size:12px; margin-top: -15px; color: #1064AD;">Price: 5,000Php
+                    </p>
+                    <p>Tooth whitening is a cosmetic procedure using bleaching agents to lighten teeth. It's done professionally in a dental office or at home with kits recommended by dentists. Whitening isn't permanent and may need touch-ups. Consulting a dentist is important, as it may not be suitable for everyone or certain dental conditions.</p>
+                    <div class="info-flex-container-space-between">
+                    <button class="service-select-btn" id="selecttoothwhitening" onclick="selecttoothwhitening()" data-price="750" data-name="Tooth Whitening">Select</button>
+                    <button class="service-unselect-btn" id="unselecttoothwhitening"onclick="unselecttoothwhitening()">Unselect</button>
+                    <button class="service-select-btn" id="close" onclick="closeservicemodal()">Close</button>
+                    </div>  
+                </div>
+            </div>
+            <div class="jacketcrownmodal" id="jacketcrownmodal">
+                <div id="jacket-crown">
+                    <img src="/images/jacket crown.jpg" class="img-border"width="100%" alt="content2">
+                    <p class="subtext">Jacket Crown</p>
+                    <p class="price" style="font-size:12px; margin-top: -15px; color: #1064AD;">Price: 6,000Php
+                    </p>
+                    <p>A jacket crown, also called a full crown, covers the entire visible part of a tooth and is used for extensive damage. It's custom-made from materials like metal or ceramic, providing strength and a natural appearance. The process involves preparing the tooth, taking an impression, and fitting the crown. They offer durability and aesthetics, lasting for years with proper care.</p>
+                    <div class="info-flex-container-space-between">
+                    <button class="service-select-btn" id="selectjacketcrown" onclick="selectjacketcrown()" data-price="900" data-name="Jacket Crown">Select</button>
+                    <button class="service-unselect-btn" id="unselectjacketcrown"onclick="unselectjacketcrown()">Unselect</button>
+                    <button class="service-select-btn" id="close" onclick="closeservicemodal()">Close</button>
+                    </div>  
+                </div>
+            </div>
+            <div class="toothveneermodal" id="toothveneermodal">
+                <div id="tooth-veneer">
+                    <img src="/images/tooth veneer.jpg" class="img-border"width="100%" alt="content2">
+                    <p class="subtext">Tooth Veneer</p>
+                    <p class="price" style="font-size:12px; margin-top: -15px; color: #1064AD;">Price: 26,000Php
+                    </p>
+                    <p>A tooth veneer is a thin shell, often porcelain or resin, bonded to the front of a tooth to improve its appearance. It addresses issues like discoloration, chips, gaps, and improves alignment. The process involves consulting with a dentist, preparing the tooth, taking an impression, and bonding the veneer. Veneers are popular for their transformative effect with minimal invasiveness and are durable with proper care.</p>
+                    <div class="info-flex-container-space-between">
+                    <button class="service-select-btn" id="selecttoothveneer" onclick="selecttoothveneer()" data-price="3900" data-name="Tooth Veneer">Select</button>
+                    <button class="service-unselect-btn" id="unselecttoothveneer"onclick="unselecttoothveneer()">Unselect</button>
+                    <button class="service-select-btn" id="close" onclick="closeservicemodal()">Close</button>
+                    </div>  
+                </div>
+            </div>
+
+            
+
+
+
+        <script>
+            
+        
+            document.addEventListener('DOMContentLoaded', function() {
+    const serviceButtons = document.querySelectorAll('.service-select-btn');
+    const selectedServicesList = document.getElementById('selected-services');
+    const gcashBtn = document.querySelector('#gcash-btn');
+    let totalPayment = 0;
+    let selectedServiceCount = 0;
+
+    function updateTotalPayment() {
+        totalPayment = 0;
+        selectedServicesList.innerHTML = '';
+        document.querySelectorAll('.service-select-btn.selected').forEach(serviceBtn => {
+            const serviceName = serviceBtn.getAttribute('data-name');
+            const servicePrice = parseInt(serviceBtn.getAttribute('data-price'));
+            totalPayment += servicePrice;
+            const listItem = document.createElement('li');
+            listItem.textContent = `${serviceName}`;
+            selectedServicesList.appendChild(listItem);
+        });
+        document.getElementById('service-price').innerText = `Total Payment: ${totalPayment} Php`;
+    }
+
+    function handleServiceSelection(button) {
+        if (button.classList.contains('selected') || selectedServiceCount < 2) {
+            button.classList.toggle('selected');
+            button.disabled = true; // Disable the button after selection
+            selectedServiceCount += button.classList.contains('selected') ? 1 : -1;
+            updateTotalPayment();
+        } else {
+            alert('You can only select up to 2 services.');
+        }
+    }
+
+    serviceButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            handleServiceSelection(button);
+        });
+    });
+
+    gcashBtn.addEventListener('click', async () => {
+        const selectedServices = Array.from(document.querySelectorAll('.service-select-btn.selected'))
+            .map(service => service.getAttribute('data-name'));
+        if (totalPayment > 0) {
+            const response = await fetch('/create-payment-intent', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ amount: totalPayment, services: selectedServices }),
+            });
+
+            const data = await response.json();
+            console.log(data);
+
+            if (data.checkout_url) {
+                window.open(data.checkout_url);
+            }
+        } else {
+            alert('Please select at least one service.');
+        }
+    });
+
+    function handlePaymentStatus(paymentStatus) {
+        const paymentStatusElement = document.getElementById('payment-status');
+        if (paymentStatus === 'success') {
+            paymentStatusElement.textContent = 'Payment Successful';
+        } else if (paymentStatus === 'failed') {
+            paymentStatusElement.textContent = 'Payment Failed';
+        } else {
+            paymentStatusElement.textContent = '';
+        }
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const paymentStatus = urlParams.get('payment_status');
+    handlePaymentStatus(paymentStatus);
+});
+
+document.getElementById('receipt-image').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    const container = document.getElementById('image-container');
+
+    reader.onload = function(e) {
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        img.style.maxWidth = '100%';
+        img.style.maxHeight = '300px';
+        container.innerHTML = ''; // Clear previous image
+        container.appendChild(img);
+    };
+
+    reader.readAsDataURL(file);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    fetchLatestAppointment();
+});
+
+async function fetchLatestAppointment() {
+    try {
+        const response = await fetch('/api/appointments/latest');
+        const latestAppointment = await response.json();
+        populateModal(latestAppointment);
+    } catch (error) {
+        console.error('Error fetching latest appointment:', error);
+    }
+}
+
+function populateModal(appointment) {
+    document.getElementById('bookFirstName').textContent = appointment.firstName;
+    document.getElementById('bookLastName').textContent = appointment.lastName;
+    document.getElementById('bookAge').textContent = appointment.age;
+    document.getElementById('sex').textContent = appointment.sex;
+    document.getElementById('time').textContent = appointment.time;
+    document.getElementById('remarks').textContent = appointment.remarks;
+    document.getElementById('date').textContent = appointment.date;
+}
+
+document.getElementById('book-appointment-btn').addEventListener('click', async () => {
+    const firstName = document.getElementById('bookFirstName').textContent;
+    const lastName = document.getElementById('bookLastName').textContent;
+    const age = parseInt(document.getElementById('bookAge').textContent); 
+    const sex = document.getElementById('sex').textContent;
+    const remarks = document.getElementById('remarks').textContent;
+    const time = document.getElementById('time').textContent;
+    const dateString = document.getElementById('date').textContent;
+    const date = new Date(dateString); 
+
+    const selectedServices = Array.from(document.querySelectorAll('.service-select-btn.selected'))
+        .map(service => service.getAttribute('data-name'));
+    const totalPrice = Array.from(document.querySelectorAll('.service-select-btn.selected'))
+        .reduce((total, service) => total + parseInt(service.getAttribute('data-price')), 0);
+
+    try {
+        const response = await fetch('/api/book-appointment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                firstName, lastName, age, sex, time, remarks, date, services: selectedServices, totalPrice
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to book appointment');
+        }
+
+        window.location.href = './thank-you.html'; 
+    } catch (error) {
+        console.error('Error booking appointment:', error);
+    }
+});
+
+ 
+    </script>
+    <!--Javascript Files-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="/client-pages/payment-method.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

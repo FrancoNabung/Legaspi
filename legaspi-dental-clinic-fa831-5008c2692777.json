@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "legaspi-dental-clinic-fa831",
+  "private_key_id": "5008c26927771c89835361405f2fc02de4414799",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCnxy+dCebWfA7n\nS6TtxFmbnn6ywcF+ZpUvQUTgurwY8RPte/vPg+ArQIP67zJXE9yI/uQBzQRPjT3u\n9RxG7wwVRT+vLmPe3l5NzeNS4xiltRXYC2R50nuefFEMgN88Rg7TXD2V2dUBOcSS\n7lmGX13y1GITarCxN5/etJ8eCr9BRIER4n22k4vs+qlU15DpYF/TFrQMPEwIPXbS\nEmFRmKQcLZkLDk0ddhd25vfQ1fb7T8GwmtYqFfjhbzmjSXWYEvXqnmI8YU623ae1\nhrx16+OEQLWY4OzB5GQcdjD2qPpcvjDwf+erer1Nk3OnPSpObAbDlbzz29CBQwes\n/qJs+PYbAgMBAAECggEASEZ+NGA3mN4IbYsgmWykTW2Rlt/wwsreKWUsjsLilLwF\noaBvcY2V3AwGzuqL/QcJUdq7zirLWJm3vGDKtaP0yJT0QjrxuuiAJ3QyIVrDG19O\n8aq2teP+bN+Q6pn5kLV9XX+25/7Wy5hfHgyfdEtQ5XKobUTgqPcVX5LfmMl4alyt\nk6Gi0obz0z3bAU3buL0EFlC2XA4wmxB+506zo9LihkEDJ3JhTqND2BCwoIT7oy8e\nyj2wapZDeoaQ9yftLvHPWy66ZMpwrrqlb9RbL+paR1JeSdrf0jmuDzG4xq0gw5Vl\nz8TQ6pxncW2/vYPUK/RpRxsLesFGqUJLYgrenB2wQQKBgQDaCAyUhpXapDPYF9s9\nMh04Kc/aUapYEQX17dOuD98T5s5yIbL/KnT0Bj/XHdyHR4d5L/oH/G9GqmasliRB\nGYWYKxVijL1xsxEkDdshzraaXqx5/Q+sd3g2ldDdUx0BOaWkDkMoe2zxSlOawKdS\n1qRuiLRrgkS4WHPoJfJdYYZABwKBgQDE/tD9+B4iNkNjMy9HQFwQx8X5UFPjMnk1\nYJpwWa1RmDbOVXdfD1OrIrOr0sTzb8kixLRLhy4BD41X5hwZFXLCPu+YSDllF7e6\nw6e7Zz+jqez5H0Co/qzh7fKC7rgVbARe/Y/NDGM7h3IuQLjvxXd2B+qnEB+a7eV/\nGSm3PBWsTQKBgEL+ICdu5xKkS43FXscB4/qC1mvlleqzaFp1dgpQtCGgVKS6+A3x\nVLg6R1lown8KmnTBKhlUFjjnWN8EzyT1m5fy/QIn7nnGJKkoXMGZi4AJQQPGnw9G\nMjjLdb7br9jVhrDO9RG2QvYs+V1efss0SpfwB0fVYhomi460QjExKxf3AoGBAJWL\nd24E6CNCnD93QMHPOtTGQyTzdOs5isgZkMQPX8JcUeaq/NaeFP8KdejPNRI0XzVU\nrCXV9fd6Let3VQc5wAdzrYEl+uQicCiIlRFv3ODKg4nOztA7nVRZxUreG8KvYFYY\nGQ0pBT/Qn747BemHNxvUAK9YTxXW2Ox2VrOyGiXVAoGBALQmC0/GygM5naUDk6k6\n5FKQ5E9pSoKV2npVJe3tQXlL1LufTcrXZH+mLdVdku8WikVhX5LKhZ43oFb07ZL5\nK94XkJzf7ZpwhubLEbqaHc4qV4UQgk+7SRuQDq6jh+zR6C9bTnkRNlPZxqIyfhCN\nWUkqRdUxk9bKhpmkv496Pkvq\n-----END PRIVATE KEY-----\n",
+  "client_email": "legaspi-dental-clinic@legaspi-dental-clinic-fa831.iam.gserviceaccount.com",
+  "client_id": "117227197139380059697",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/legaspi-dental-clinic%40legaspi-dental-clinic-fa831.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

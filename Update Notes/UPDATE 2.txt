@@ -1,0 +1,43 @@
+UPDATE 2
+>book-appointment
+-fixed book appointment layout
+-added book appointment message before booking appointment
+
+>admin-w-acc.html
+-fixed bug in nav link 
+from:
+<a href="#before-and-after" class="nav-link">CONTACT US</a>
+<a href="#contact-us" class="nav-link" >BEFORE AND AFTER</a>
+to:
+<a href="#contact-us" class="nav-link">CONTACT US</a>
+<a href="#before-and-after" class="nav-link" >BEFORE AND AFTER</a>
+
+>my-account.html 
+-added book now button on my account
+>my-account.css
+-added media screen size for divider
+<------------------------------->
+@media (max-width:608px) {
+    .divider {
+        margin-top: 20px;
+    }
+}
+<------------------------------->
+
+>my-account.js
+-added hide nav onclick
+<------------------------------->
+const navLinks = document.querySelectorAll('.nav-link');
+
+const hamburgerMenu = document.querySelector('.hamburger');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        const mobileNav = document.querySelector('.mobile-nav');
+        mobileNav.classList.remove('is-active'); 
+        hamburgerMenu.classList.remove('is-active'); 
+    });
+});
+<------------------------------->
+>book-appointment
+-made book-appointment responsive 
